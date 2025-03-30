@@ -1,0 +1,115 @@
+<!-- header.html -->
+<header class="site-header">
+  <div class="container">
+    <nav class="navbar">
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="logo">
+        <a href="home.html" aria-label="Home"><i class="fas fa-film"></i></a>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="last-30-days.html">30 Days</a></li>
+        <li><a href="last-45-days.html">45 Days</a></li>
+        <li><a href="last-90-days.html">90 Days</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script src="components/layout.js"></script>
+
+<style>
+  .site-header {
+    background-color: #1e1e2f;
+    padding: 1.5rem 1rem;
+    color: white;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .logo a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .logo i.fas.fa-film {
+    font-size: 2.2rem; /* ✅ Larger movie icon */
+  }
+
+  .menu-toggle {
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none;
+    color: white;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    font-size: 1.05rem;
+  }
+
+  .nav-links li a:hover {
+    color: #00bfff;
+  }
+
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .nav-links li {
+      margin: 0.5rem 0;
+    }
+
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .logo {
+      align-self: center;
+      margin-top: 0.5rem;
+    }
+
+    .menu-toggle {
+      align-self: flex-end;
+    }
+  }
+</style>
